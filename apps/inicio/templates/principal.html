@@ -1,6 +1,10 @@
 {% extends 'base.html' %} {% load static %} {% block contenido %}
 <div class="container">
-  <h1 class="display-1 w-100 text-center">AdminTrading</h1>
+<h1 class="display-1 w-100 text-center">AdminTrading</h1>
+{% if user.is_authenticated %}
+<h1 class="display-3 w-100 text-center">Hola, {{request.user.username|title}}</h1>
+{% endif %}
+  
   <section class="row flex-column flex-md-row">
     <article class="col d-flex align-items-center">
       <div>
