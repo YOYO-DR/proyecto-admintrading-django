@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load static %} {% block contenido %}
+<div class="container">
+  <h1 class="display-1 w-100 text-center">AdminTrading</h1>
+  <section class="row flex-column flex-md-row">
+    <article class="col d-flex align-items-center">
+      <div>
+        <h2>
+          Administrador de operaciones para el broker
+          <a href="https://libertex.org/" target="_blank"><strong>Libertex</strong></a>
+        </h2>
+        <p>
+          Guarde sus operaciones de libertex de forma manual o con un archivo
+          .csv, administre sus ganancias, del mes, de la semana, del dia, o cualquier
+          lapzo de tiempo
+        </p>
+      </div>
+    </article>
+    <article class="col d-flex align-items-center justify-content-center ">
+      <img
+        src="{% static 'media/img/pngwing.com.png' %}"
+        alt=""
+        class="img-fluid mb-5 img-princi"
+      />
+    </article>
+  </section>
+</div>
+{% endblock contenido %}

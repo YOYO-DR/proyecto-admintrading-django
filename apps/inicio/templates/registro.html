@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block contenido %}
+<div class="container d-flex justify-content-center align-items-center" style="height:83.3vh;">
+  <form method="post" class="pb-5">
+    {% csrf_token %}
+  <h1 class="text-center">Registro</h1>
+    {% if error %}
+  <p class="text-danger text-center">{{error}}</p>
+  {% endif %}
+  {% for field in form.visible_fields %}
+  <div class="mb-3 ">
+    <label class="form-label">{{field.label}}
+      {{field|add_class:'form-control'}}
+    </label>
+  </div>
+  {% endfor %}
+  <button type="submit" class="btn btn-success">Registrarse</button>
+
+  
+</form>
+</div>
+
+{% endblock contenido %}
