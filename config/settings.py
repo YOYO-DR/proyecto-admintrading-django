@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     #libs
     'widget_tweaks',
     #mis apps
-    'apps.inicio'
+    'apps.inicio',
+    'apps.panel'
 ]
 
 MIDDLEWARE = [
